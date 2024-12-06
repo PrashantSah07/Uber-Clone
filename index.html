@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive with Uber - Set Your Own Schedule | Uber</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/uber-move-text" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li id="uber">Uber</li>
+                    <li class="displaynone">Ride</li>
+                    <li class="displaynone">Drive</li>
+                    <li class="displaynone">Business</li>
+                    <li class="displaynone">Uber Eats</li>
+                    <li class="displaynone" id="about">About
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                            </path>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li class="displaynone" id="en">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z"
+                                fill="currentColor"></path>
+                        </svg>EN
+                    </li>
+                    <li class="displaynone">Help</li>
+                    <div style="display: flex; gap: 3px; justify-content: center; align-items: center;">
+                        <button id="login">Log in</button>
+                        <button id="signup">Sign up</button>
+                        <li id="side-navbar" style="display: flex; justify-content: center; align-items: center;"><svg
+                                width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M2 6h20v3H2V6Z" fill="currentColor"></path>,<path d="M2 15h20v3H2v-3Z"
+                                    fill="currentColor"></path>
+                            </svg></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside>
+        <div class="hidden-about">
+            <div style="z-index: 20px;">
+                <p>About us</p>
+                <p>Our offering</p>
+                <p>How uber works</p>
+                <p>Impact</p>
+                <p>Diversity, equity, and inclusion</p>
+                <p>Sustainability</p>
+                <p id="about-explore">Explore <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                        </path>
+                    </svg></p>
+                <p>Newsroom</p>
+                <p>Investor relations</p>
+                <p>Autonomous</p>
+                <p>Blog</p>
+                <p>Careers</p>
+            </div>
+            <div style="z-index: 20;">
+                <p id="about-opper-by-city">Oppertunities by city <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z">
+                        </path>
+                    </svg></p>
+            </div>
+            <div style="z-index: 20;">
+                <p>Driver Oppertunities paris</p>
+                <p>Driver Oppertunities marseille</p>
+                <p>Driver Oppertunities Lyon</p>
+                <p>Driver Oppertunities Nice</p>
+                <p>Driver Oppertunities Toulouse</p>
+                <p>Driver Oppertunities Lille</p>
+                <p>Driver Oppertunities Bordeaux</p>
+                <p>Driver Oppertunities Nantes</p>
+                <p>Driver Oppertunities Strasbourg</p>
+                <p>Driver Oppertunities Montpellier</p>
+            </div>
+        </div>
+    </aside>
+    <aside class="hidden-sign-up-page">
+        <div class="hidden-cut-signup-page">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="m18.1 8.1-2.2-2.2-3.9 4-3.9-4-2.2 2.2 4 3.9-4 3.9 2.2 2.2 3.9-4 3.9 4 2.2-2.2-4-3.9 4-3.9Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="signup-page">
+            <div>
+                <h1>Sign up to drive & deliver</h1>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div>
+                <h1>Create a rider account</h1>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div>
+                <h1>Order delivery with Uber Eats</h1>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div>
+                <h1>Sign up for Uber for Business</h1>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+    </aside>
+    <aside>
+        <div class="side-navbar-content">
+            <h1>Ride</h1>
+            <h1>Drive</h1>
+            <h1>Business</h1>
+            <h1>Uber Eats</h1>
+            <div>
+                <h1 id="aboutt" style="display: flex;
+                justify-content: space-between; align-items:center ;">About
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                        </path>
+                    </svg>
+                </h1>
+                <div class="about-content">
+                    <p>About us</p>
+                    <p>Our offerings</p>
+                    <p>How uber works</p>
+                    <p>Impact</p>
+                    <p>Diversity, equity, and inclusion</p>
+                    <p>Sustainability</p>
+                    <div>
+                        <p style="display: flex;justify-content: space-between; align-items: center;">Explore <svg
+                                style="width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg></p>
+                        <div>
+                            <p>Oppertunities by city</p>
+                            <div>
+                                <p>Driver Oppertunities paris</p>
+                                <p>Driver Oppertunities marseille</p>
+                                <p>Driver Oppertunities Lyon</p>
+                                <p>Driver Oppertunities Nice</p>
+                                <p>Driver Oppertunities Toulouse</p>
+                                <p>Driver Oppertunities Lille</p>
+                                <p>Driver Oppertunities Bordeaux</p>
+                                <p>Driver Oppertunities Nantes</p>
+                                <p>Driver Oppertunities Strasbourg</p>
+                                <p>Driver Oppertunities Montpellier</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Newsroom</p>
+                    <p>Investor relations</p>
+                    <p>Autonomous</p>
+                    <p>Blog</p>
+                    <p>Careers</p>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <h1>Help</h1>
+                <p><svg id="lang-svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <title>Globe</title>
+                        <path
+                            d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z"
+                            fill="currentColor"></path>
+                    </svg> EN
+                </p>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="data-baseweb">
+            <div>
+                <p>Take your VTC exam for €20</p>
+                <svg class="cut-svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
+                    aria-label="Close pop-up window" class="css-bJcvgE">
+                    <title>X small</title>
+                    <path d="m18.1 8.1-2.2-2.2-3.9 4-3.9-4-2.2 2.2 4 3.9-4 3.9 2.2 2.2 3.9-4 3.9 4 2.2-2.2-4-3.9 4-3.9Z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+            <p>Right now, get your VTC exam registration and 40 hours of distance learning with our partner Cab
+                Formations for just €20. Go to <span>this link</span> to create an Uber account. Once logged in to your
+                Uber account,
+                you can register for the VTC exam directly online or <span>make an appointment</span> at one of our
+                Greenlight Hubs.*
+            </p>
+        </div>
+
+        <div class="hero-section1">
+            <div>
+                <h1>Drive when you want, make what you need</h1>
+                <p>Earn on your own schedule.</p>
+                <div class="form">
+                    <button>Get started</button>
+                    <p>Already have an account? Sign in</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_768,w_1152/v1656511866/assets/67/3b671f-4ccd-484a-ad97-cded31823ed0/original/illustration-safety-01-1.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="reminder">
+            <div>
+                <div>
+                    <p id="reminder">Reminder
+                        <svg class="cut-svg cut-svg2" width="1em" height="1em" viewBox="0 0 24 24" fill="none"
+                            aria-label="Close pop-up window" class="css-bJcvgE">
+                            <title>X small</title>
+                            <path
+                                d="m18.1 8.1-2.2-2.2-3.9 4-3.9-4-2.2 2.2 4 3.9-4 3.9 2.2 2.2 3.9-4 3.9 4 2.2-2.2-4-3.9 4-3.9Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </p>
+                    <p class="seperation"></p>
+                </div>
+                <div>
+                    <p style="padding: 20px 0; padding-right: 20px;">The addition of diesel vehicles, new or otherwise,
+                        is no longer possible
+                        unless they're eligible
+                        for
+                        the Uber Black, Uber Van, or Uber Access ride options.</p>
+                    <p class="seperation"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section2">
+            <div>
+                <h1>Control your schedule</h1>
+                <div class="car-img">
+                    <img class=""
+                        src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_270,w_1152/v1536163470/assets/3a/a87102-5c54-478c-8a98-0df3a951a202/original/whyDriveWithUs_desktop.svg"
+                        alt="Why drive with us illustration">
+                </div>
+                <div class="control-schedule">
+                    <div>
+                        <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535521901/assets/04/2e9cbe-6142-4d19-bea4-627a1967cc74/original/calendar.svg"
+                            alt="">
+                        <p>You’re in control</p>
+                        <p>And you can follow your sales figures live every week.</p>
+                    </div>
+                    <div>
+                        <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535521926/assets/34/56a7a3-6c7b-46fc-a8c6-91d3271b92bd/original/money.svg"
+                            alt="">
+                        <p>Set your own schedule</p>
+                        <p>Hit the road based on your personal or family requirements</p>
+                    </div>
+                    <div>
+                        <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535521963/assets/d3/c75f64-aac4-4df0-abd1-561b7ce4feab/original/support.svg"
+                            alt="">
+                        <p>Drive in total freedom</p>
+                        <p>One tap and off you go. Another tap and you stop. It's that simple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section3">
+            <div>
+                <h1>Here’s what you need to become a driver or delivery person</h1>
+                <div>
+                    <div id="drive">
+                        <p id="drive-with-uber">Drive with uber</p>
+                        <p id="other-oppertunities">Other Opportunities</p>
+                        <p class="slide"></p>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535522671/assets/13/d90c65-0e16-40a4-950e-f8a7d9d68f2e/original/requirement.svg"
+                                alt="">
+                            <p>Create your driver account</p>
+                            <p>The first step is to create your driver account. It only takes 2 minutes.</p>
+                            <p style="cursor: pointer;">Sign up</p>
+                        </div>
+                        <div>
+                            <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535522710/assets/8e/cc5c27-1604-4e6f-ad4d-11fec148143a/original/document.svg"
+                                alt="">
+                            <p>Make an appointment with an Uber Expert</p>
+                            <p>With this free appointment, we'll show you the steps you need to take to become a driver
+                                on the Uber platform. This appointment is without obligation.</p>
+                            <p style="cursor: pointer;">Book an appointment</p>
+                        </div>
+                        <div>
+                            <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535522753/assets/08/1702e0-ec8f-4ae4-8a80-110110732fb9/original/documentCheck.svg"
+                                alt="">
+                            <p>Take the VTC exam</p>
+                            <p>The VTC exam enables you to obtain the VTC card, which is compulsory to drive using Uber.
+                                If you come to one of our Greenlight Hubs, we'll be happy to show you how to best
+                                prepare for this exam.</p>
+                            <p style="cursor: pointer;">Learn more</p>
+                        </div>
+                    </div>
+                    <div class="content2">
+                        <div>
+                            <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_30,w_30/v1535521926/assets/34/56a7a3-6c7b-46fc-a8c6-91d3271b92bd/original/money.svg"
+                                alt="">
+                            <p>Deliver with Uber Eats by bike</p>
+                            <p>Find out how to become a courier where you live.</p>
+                            <p>Deliver with Uber Eats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section4">
+            <h1>Need a vehicle?</h1>
+            <p>Find the right vehicle for your business with our partners’ offers.</p>
+            <div>
+                <p style="cursor: pointer;">View the list of accepted vehicles</p>
+                <p style="cursor: pointer;">Browse vehicle offers</p>
+            </div>
+        </div>
+
+        <div class="hero-section5">
+            <h1>We’re here for you</h1>
+            <p>Drive with Uber in France</p>
+            <div>
+                <div>
+                    <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_60,w_60/v1535523136/assets/a7/c590ac-242e-47eb-86cb-90db7712d44f/original/Community-Guidelines.svg"
+                        alt="">
+                    <p class="bold">Discover the driver blog</p>
+                    <p>Find out more about the chauffeur activity.</p>
+                    <p style="cursor: pointer;">Go to the blog</p>
+                </div>
+                <div>
+                    <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_60,w_60/v1535523101/assets/22/bdf7a1-f49f-47c0-a59e-3e6bc274b6f2/original/24_7-Support.svg"
+                        alt="">
+                    <p class="bold">Chat online with an adviser</p>
+                    <p>Our advisers are here to answer your questions.</p>
+                    <p style="cursor: pointer;">Contact an adviser</p>
+                </div>
+                <div>
+                    <img src="https://www.uber-assets.com/image/upload/q_auto:eco,c_fill,h_60,w_60/v1536104955/assets/84/1767a7-75d0-4a9f-9f1a-46fc6f499ac1/original/911-Assistance-Button.svg"
+                        alt="">
+                    <p class="bold">Need help?</p>
+                    <p>If you have a question about how to get started, we're here to help.</p>
+                    <p style="cursor: pointer;">Contact us</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section6">
+            <div>
+                <h1>The Driver app</h1>
+                <p>Easy to use and reliable, the app was built for drivers, with drivers.</p>
+                <p style="text-decoration: underline; cursor: pointer;">Learn more</p>
+            </div>
+        </div>
+
+
+        <div class="hero-section7">
+            <div>
+                <h1>Frequently asked questions from drivers</h1>
+                <div class="FAQ">
+                    <div class="underline">
+                        <p class="flex">Can I drive with the Uber app in my city?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <div class="one">
+                            <p>Uber is available in thousands of cities around the world. Click below to see if yours is
+                                one of them.</p>
+                            <p class="txt-underline">See all cities</p>
+                        </div>
+                    </div>
+                    <div class="underline">
+                        <p class="flex">What conditions must I meet to drive with the Uber app?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <div class="two">
+                            <p>You must be of the minimum age to drive in your city, have a transportation
+                                authorization, have an eligible mode of transportation, and provide the required
+                                documents, including a valid driver's license.
+                            <p class="txt-underline">Learn more</p>
+                        </div>
+                    </div>
+                    <div class="underline">
+                        <p class="flex">Is the Uber app safe?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <div class="three">
+                            <p>Your safety is very important to us. Uber has an international security team that does
+                                everything in its power to prevent incidents. To find out more about in-app security
+                                features, as well as safeguards such as GPS tracking and phone number anonymization,
+                                follow the link below.</p>
+                            <p class="txt-underline">Discover Uber's commitment to safety</p>
+                        </div>
+                    </div>
+                    <div class="underline">
+                        <p class="flex">How do I find a vehicle?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <div class="four">
+                            <p>If you'd like to drive with the Uber app but don't own a car, you can get one from our
+                                partners, or from a car fleet manager in some regions. Please note that vehicle options
+                                may vary by city.</p>
+                            <p class="txt-underline">Learn more</p>
+                        </div>
+                    </div>
+                    <div class="underline">
+                        <p class="flex">What insurance do I need for my business?
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z">
+                                </path>
+                            </svg>
+                        </p>
+                        <div class="five">
+                            <p>As a VTC driver, you need to be insured to transport people for hire or reward. As such,
+                                both Operating Liability and Traffic Liability insurance are mandatory.</p>
+                            <p class="txt-underline">Learn more</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section8">
+            <h1>Drive your way in the app</h1>
+        </div>
+
+        <div class="hero-section9">
+            <div>
+                <h1>Drive with uber
+                    <p>
+                        <svg id="arrow" width="36px" height="36px" viewBox="0 0 24 24" fill="none">
+                            <title>Arrow right</title>
+                            <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor">
+                            </path>
+                        </svg>
+                    </p>
+                </h1>
+            </div>
+            <p>
+                *Offer reserved for candidates holding an Uber account who register for the VTC exam via the
+                registration
+                form or in an Uber reception area during the period of validity of the offer, subject to availability of
+                the appointment slots and form proposed on the Uber website. Offer cannot be combined with Uber's
+                reimbursement of examination fees.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer1">
+            <p>Uber</p>
+            <p>Visit Help Center</p>
+        </div>
+
+        <div class="footer2">
+            <div>
+                <p>Company</p>
+                <a href="">About us</a>
+                <a href="">Our offering</a>
+                <a href="">Newsroom</a>
+                <a href="">Investors</a>
+                <a href="">Blog</a>
+                <a href="">Careers</a>
+            </div>
+            <div>
+                <p>Products</p>
+                <a href="">Ride</a>
+                <a href="">Drive</a>
+                <a href="">Deliver</a>
+                <a href="">Eat</a>
+                <a href="">Uber for Business</a>
+                <a href="">Uber Freight</a>
+                <a href="">Gift cards</a>
+            </div>
+            <div>
+                <p>Global citizenship</p>
+                <a href="">Safety</a>
+                <a href="">Sustainability</a>
+            </div>
+            <div>
+                <p>Travel</p>
+                <a href="">Cities</a>
+            </div>
+        </div>
+
+        <div class="footer3">
+            <div class="h">
+                <div>
+                    <a href="">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <title>facebook</title>
+                            <path
+                                d="M21.79 1H2.21C1.54 1 1 1.54 1 2.21v19.57c0 .68.54 1.22 1.21 1.22h10.54v-8.51H9.9v-3.33h2.86V8.71c0-2.84 1.74-4.39 4.27-4.39.85 0 1.71.04 2.56.13v2.97h-1.75c-1.38 0-1.65.65-1.65 1.62v2.12h3.3l-.43 3.33h-2.89V23h5.61c.67 0 1.21-.54 1.21-1.21V2.21C23 1.54 22.46 1 21.79 1Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <title>twitter</title>
+                            <path
+                                d="M14.094 10.317 22.28 1H20.34l-7.11 8.088L7.557 1H1.01l8.583 12.231L1.01 23H2.95l7.503-8.543L16.446 23h6.546M3.649 2.432h2.978L20.34 21.639h-2.98"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <title>youtube</title>
+                            <path
+                                d="M23 12s0-3.85-.46-5.58c-.25-.95-1-1.7-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46c-.95.25-1.69 1.01-1.94 1.96C1 8.15 1 12 1 12s.04 3.85.5 5.58c.25.95 1 1.7 1.95 1.96 1.71.46 8.59.46 8.59.46s6.88 0 8.6-.46c.95-.25 1.69-1.01 1.94-1.96.46-1.73.42-5.58.42-5.58Zm-13 3.27V8.73L15.5 12 10 15.27Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <title>linkedin</title>
+                            <path
+                                d="M21.37 1H2.62C1.73 1 1 1.71 1 2.58v18.83c0 .88.73 1.59 1.62 1.59h18.75c.9 0 1.63-.71 1.63-1.59V2.58C23 1.71 22.27 1 21.37 1ZM7.53 19.75H4.26V9.25h3.27v10.5ZM5.89 7.81C4.85 7.81 4 6.96 4 5.92s.84-1.89 1.89-1.89c1.04 0 1.89.85 1.89 1.89.01 1.04-.84 1.89-1.89 1.89Zm13.86 11.94h-3.26v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7v5.19H9.57V9.26h3.13v1.43h.04c.44-.83 1.5-1.7 3.09-1.7 3.3 0 3.91 2.17 3.91 5v5.76h.01Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <title>instagram</title>
+                            <g fill="currentColor">
+                                <path
+                                    d="M21.15 2.85C19.05.74 16.23 1 12 1 8.04 1 5 .69 2.85 2.85.74 4.95 1 7.77 1 12c0 3.95-.31 7 1.85 9.15C4.95 23.26 7.77 23 12 23c3.96 0 7 .31 9.15-1.85C23.25 19.05 23 16.23 23 12c0-4.31.24-7.07-1.85-9.15Zm-1.4 16.9c-1.37 1.37-3.18 1.27-7.75 1.27-4.29 0-6.34.15-7.75-1.27-1.44-1.44-1.27-3.51-1.27-7.75 0-4.23-.15-6.33 1.27-7.75C5.66 2.84 7.6 2.98 12 2.98c4.23 0 6.33-.15 7.75 1.27 1.38 1.38 1.27 3.22 1.27 7.75 0 4.24.15 6.34-1.27 7.75Z">
+                                </path>
+                                <path
+                                    d="M12 6.35a5.65 5.65 0 1 0 .001 11.301A5.65 5.65 0 0 0 12 6.35Zm0 9.32c-2.02 0-3.67-1.64-3.67-3.67 0-2.03 1.64-3.67 3.67-3.67 2.03 0 3.67 1.64 3.67 3.67 0 2.02-1.65 3.67-3.67 3.67ZM17.87 4.81c-.73 0-1.32.59-1.32 1.32 0 .73.59 1.32 1.32 1.32.73 0 1.32-.59 1.32-1.32 0-.73-.59-1.32-1.32-1.32Z">
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <p class="br">
+                        <svg id="lang-svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <title>Globe</title>
+                            <path
+                                d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5ZM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5Zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1Zm1.9-6.1-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4ZM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12Zm3.5 6.6 1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4Z"
+                                fill="currentColor"></path>
+                        </svg> English
+                    </p>
+                    <p class="br">
+                        <svg id="location-svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <title>Location marker</title>
+                            <path
+                                d="M18.7 3.8C15 .1 9 .1 5.3 3.8c-3.7 3.7-3.7 9.8 0 13.5L12 24l6.7-6.8c3.7-3.6 3.7-9.7 0-13.4ZM12 12.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"
+                                fill="currentColor"></path>
+                        </svg> Indore
+                    </p>
+                </div>
+            </div>
+            <div class="p">
+                <p>© 2024 Uber Technologies Inc.</p>
+                <div>
+                    <p>Privacy</p>
+                    <p>Accessibility</p>
+                    <p>Terms</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="signup-to-drive">
+        <button>Sign up to drive</button>
+    </div>
+
+    <div class="location-select">
+        <div>
+            <p>You're seeing information for <span> France.</span></p>
+            <svg id="cutt" style="cursor: pointer;" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="m18.1 8.1-2.2-2.2-3.9 4-3.9-4-2.2 2.2 4 3.9-4 3.9 2.2 2.2 3.9-4 3.9 4 2.2-2.2-4-3.9 4-3.9Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+        <button>Select a different location.</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
