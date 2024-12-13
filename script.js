@@ -285,3 +285,43 @@ sideNavbarSvg.addEventListener("click", function () {
     isOn9 = !isOn9;
 })
 
+
+let exploree = document.querySelector('.exploree');
+let exploreeSVG = document.querySelector('#exploree-svg');
+let exploreOBC = document.querySelector('.explore-obc');
+
+let isOn10 = false;
+
+exploree.addEventListener('click', function () {
+    if (isOn10) {
+        exploreOBC.style.display = 'none'
+        exploreeSVG.style.transform = 'rotate(0deg)'
+
+    }
+    else {
+        exploreOBC.style.display = 'flex'
+        exploreOBC.style.animation = "translateY 0.2s linear 1"
+        exploreeSVG.style.transform = 'rotate(-180deg)'
+    }
+    isOn10 = !isOn10;
+});
+
+let obcc = document.querySelector('.obcc');
+let obc = document.querySelector('.obc');
+let obcSVG = document.querySelector('#obc-svg')
+
+let isOn11 = false;
+
+obcc.addEventListener('click', function () {
+    if (isOn11) {
+        obc.style.display = 'none'
+        obcSVG.style.transform = 'rotate(0deg)'
+
+    }
+    else {
+        obc.style.display = 'flex'
+        obc.style.animation = "translateY2 0.2s linear 1"
+        obcSVG.style.transform = 'rotate(-180deg)'
+    }
+    isOn11 = !isOn11;
+});

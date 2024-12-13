@@ -304,6 +304,23 @@ header .navbar {
     width: 50px;
 }
 
+.about-content .explore-obc {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 35px;
+    padding-left: 10px;
+    display: none;
+}
+
+.about-content .obc {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-left: 20px;
+    display: none;
+}
+
 .side-navbar-content .about-content {
     display: flex;
     flex-direction: column;
@@ -1568,6 +1585,10 @@ header .navbar {
 
     .signup-page {
         padding: 170px 25px 140px;
+    }
+
+    .footer2 {
+        padding: 0px 30px 30px 30px;
     }
 }
 
