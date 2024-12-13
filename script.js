@@ -300,7 +300,7 @@ exploree.addEventListener('click', function () {
     }
     else {
         exploreOBC.style.display = 'flex'
-        exploreOBC.style.animation = "translateY 0.2s linear 1"
+        exploreOBC.style.animation = "translateY2 0.2s linear 1"
         exploreeSVG.style.transform = 'rotate(-180deg)'
     }
     isOn10 = !isOn10;
